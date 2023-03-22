@@ -35,8 +35,8 @@ export interface ISplitProps extends HTMLElementProps {
      * Only support controlled mode, so it's required
      */
     sizes: (string | number)[];
-    sashRender: (index: number, active: boolean) => React.ReactNode;
-    onChange: (sizes: number[]) => void;
+    sashRender?: (index: number, active: boolean) => React.ReactNode;
+    onChange: (sizes: (string | number)[]) => void;
     onDragStart?: (e: MouseEvent) => void;
     onDragEnd?: (e: MouseEvent) => void;
     className?: string;
